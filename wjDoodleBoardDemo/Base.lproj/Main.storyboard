@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xre-lZ-3k0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8wJ-uv-VMa"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="清屏" id="Vfv-4h-lqH">
+                                        <connections>
+                                            <action selector="wjClearScreenAction:" destination="BYZ-38-t0r" id="WRa-1y-wkQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="撤销" id="JWo-LI-6st">
+                                        <connections>
+                                            <action selector="wjUndoAction:" destination="BYZ-38-t0r" id="k8T-F4-y4K"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="橡皮擦" id="d8j-M6-OQh">
+                                        <connections>
+                                            <action selector="wjEraseAction:" destination="BYZ-38-t0r" id="lkb-kw-hNh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="相机" id="hYc-bS-lsd">
+                                        <connections>
+                                            <action selector="wjCameraTakePhotoAction:" destination="BYZ-38-t0r" id="rVi-XL-cYF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="相册" id="HsE-yT-vnB">
+                                        <connections>
+                                            <action selector="wjChoosePhotoFromAlbumAction:" destination="BYZ-38-t0r" id="SI8-WF-l1P"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="GD9-Ab-9pY"/>
+                                    <barButtonItem title="保存" id="xDH-6g-Op8">
+                                        <connections>
+                                            <action selector="wjSaveDoodleAction:" destination="BYZ-38-t0r" id="SCG-BF-nCa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQD-mG-4qs">
+                                <rect key="frame" x="0.0" y="527" width="375" height="140"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="oGD-LI-34R">
+                                        <rect key="frame" x="8" y="10" width="322" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="YA5-xb-NIg"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="wjSetLineWidth:" destination="BYZ-38-t0r" eventType="valueChanged" id="dqf-uv-w0q"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="线宽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtA-Op-vps">
+                                        <rect key="frame" x="338" y="12" width="27" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="Nvz-d6-nON"/>
+                                            <constraint firstAttribute="width" constant="27" id="gwr-zW-10c"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZ4-Hm-2so" userLabel="colorView" customClass="wjColorView">
+                                        <rect key="frame" x="280" y="45" width="85" height="85"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="确定选择颜色" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSV-xP-XZD">
+                                                <rect key="frame" x="0.0" y="32" width="85" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="85" id="SRb-2u-Puu"/>
+                                            <constraint firstAttribute="width" constant="85" id="q22-BQ-PUc"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CI1-eB-yaT">
+                                        <rect key="frame" x="10" y="47" width="260" height="85"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jRu-Y2-j0N">
+                                                <rect key="frame" x="-2" y="0.0" width="264" height="22.5"/>
+                                                <color key="thumbTintColor" red="1" green="0.026395015559999999" blue="0.042413699870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="wjRedColorAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="VqK-8S-bOE"/>
+                                                </connections>
+                                            </slider>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="udF-Yd-bU4">
+                                                <rect key="frame" x="-2" y="31.5" width="264" height="23"/>
+                                                <color key="thumbTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="wjGreenColorAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="5Il-Rv-ABi"/>
+                                                </connections>
+                                            </slider>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GpB-LV-8C7">
+                                                <rect key="frame" x="-2" y="63.5" width="264" height="22.5"/>
+                                                <color key="thumbTintColor" red="0.18039215689999999" green="0.58039215690000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="wjBlueColorAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Cr0-bG-hyG"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.58823529409999997" green="0.82745098039999998" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="CI1-eB-yaT" firstAttribute="bottom" secondItem="FQD-mG-4qs" secondAttribute="bottomMargin" id="6It-8W-Nch"/>
+                                    <constraint firstItem="CI1-eB-yaT" firstAttribute="leading" secondItem="FQD-mG-4qs" secondAttribute="leading" constant="10" id="7RQ-WX-AMd"/>
+                                    <constraint firstItem="YtA-Op-vps" firstAttribute="leading" secondItem="oGD-LI-34R" secondAttribute="trailing" constant="10" id="BEy-EI-VQu"/>
+                                    <constraint firstItem="oGD-LI-34R" firstAttribute="top" secondItem="FQD-mG-4qs" secondAttribute="top" constant="10" id="IcF-ha-Sfq"/>
+                                    <constraint firstItem="oGD-LI-34R" firstAttribute="leading" secondItem="FQD-mG-4qs" secondAttribute="leading" constant="10" id="MFV-cq-ZDu"/>
+                                    <constraint firstAttribute="trailing" secondItem="YtA-Op-vps" secondAttribute="trailing" constant="10" id="TQc-d8-xvD"/>
+                                    <constraint firstAttribute="bottom" secondItem="jZ4-Hm-2so" secondAttribute="bottom" constant="10" id="Uad-nc-zzK"/>
+                                    <constraint firstItem="jZ4-Hm-2so" firstAttribute="height" secondItem="CI1-eB-yaT" secondAttribute="height" id="XLh-aT-327"/>
+                                    <constraint firstAttribute="height" constant="140" id="XWD-gJ-9nr"/>
+                                    <constraint firstItem="YtA-Op-vps" firstAttribute="centerY" secondItem="oGD-LI-34R" secondAttribute="centerY" id="ah4-bR-SP2"/>
+                                    <constraint firstItem="YtA-Op-vps" firstAttribute="trailing" secondItem="jZ4-Hm-2so" secondAttribute="trailing" id="vnU-2X-vjG"/>
+                                    <constraint firstItem="jZ4-Hm-2so" firstAttribute="leading" secondItem="CI1-eB-yaT" secondAttribute="trailing" constant="10" id="wjW-mI-T4G"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dv-vO-fKG" customClass="wjDoodleBoardView">
+                                <rect key="frame" x="0.0" y="44" width="375" height="483"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xre-lZ-3k0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AmZ-BF-fTl"/>
+                            <constraint firstAttribute="trailing" secondItem="FQD-mG-4qs" secondAttribute="trailing" id="I2S-o7-IyS"/>
+                            <constraint firstAttribute="trailing" secondItem="2dv-vO-fKG" secondAttribute="trailing" id="K6f-T7-MJH"/>
+                            <constraint firstItem="xre-lZ-3k0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nd7-rt-Drn"/>
+                            <constraint firstItem="2dv-vO-fKG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ruq-5t-FbW"/>
+                            <constraint firstItem="FQD-mG-4qs" firstAttribute="top" secondItem="2dv-vO-fKG" secondAttribute="bottom" id="TJH-av-Wn9"/>
+                            <constraint firstItem="FQD-mG-4qs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Yyu-Mw-XPP"/>
+                            <constraint firstAttribute="bottom" secondItem="FQD-mG-4qs" secondAttribute="bottom" id="bsl-oP-zvt"/>
+                            <constraint firstItem="2dv-vO-fKG" firstAttribute="top" secondItem="xre-lZ-3k0" secondAttribute="bottom" id="ksg-Ss-fvH"/>
+                            <constraint firstAttribute="trailing" secondItem="xre-lZ-3k0" secondAttribute="trailing" id="nYf-cV-hh0"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="colorChooseView" destination="jZ4-Hm-2so" id="MiP-FF-tTW"/>
+                        <outlet property="doodleBoardView" destination="2dv-vO-fKG" id="B5J-gX-5Z1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+</document>
