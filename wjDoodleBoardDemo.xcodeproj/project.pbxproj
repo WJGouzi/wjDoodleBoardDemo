@@ -130,6 +130,7 @@
 				TargetAttributes = {
 					9BDF16231ED6D38000BDE26A = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 684VKU9G29;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -296,10 +297,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 684VKU9G29;
 				INFOPLIST_FILE = wjDoodleBoardDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.wj.wjDoodleBoardDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.wj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -308,10 +310,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 684VKU9G29;
 				INFOPLIST_FILE = wjDoodleBoardDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.wj.wjDoodleBoardDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.wj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -335,6 +338,7 @@
 				9BDF163D1ED6D38000BDE26A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

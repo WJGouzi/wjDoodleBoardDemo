@@ -119,6 +119,11 @@ static BOOL isClicked = YES;
     handleView.delegate = self;
     [self.view addSubview:handleView];
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:@"可对图片进行缩放\\旋转\\移动等编辑\n但需要'长按'才能保存到绘图板中!" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+    [alertVC addAction:action];
+    [self presentViewController:alertVC animated:YES completion:nil];
 }
 
 #pragma wjHandleImageViewDelegate
