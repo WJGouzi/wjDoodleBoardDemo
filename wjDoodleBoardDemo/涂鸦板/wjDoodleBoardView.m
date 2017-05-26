@@ -8,10 +8,11 @@
 
 #import "wjDoodleBoardView.h"
 #import "wjBezierPath.h"
+//#import "wjColorView.h"
 
 @interface wjDoodleBoardView ()
 
-@property (nonatomic, strong) UIBezierPath *path;
+@property (nonatomic, strong) wjBezierPath *path;
 
 @property (nonatomic, strong) NSMutableArray *allPathArray;
 
@@ -20,6 +21,9 @@
 
 /* line width*/
 @property (nonatomic, assign) CGFloat wjLineWidth;
+
+/** wjColorView */
+//@property (nonatomic, strong) wjColorView *colorView;
 
 @end
 
@@ -52,6 +56,8 @@
     CGPoint currentPoint = [pan locationInView:self];
     if (pan.state == UIGestureRecognizerStateBegan) {
         wjBezierPath *path = [[wjBezierPath alloc] init];
+        [path setLineJoinStyle:kCGLineJoinRound];
+        [path setLineCapStyle:kCGLineCapRound];
         path.color = self.wjColor;
         [path setLineWidth:self.wjLineWidth];
         [path moveToPoint:currentPoint];
@@ -61,7 +67,6 @@
         [self.path addLineToPoint:currentPoint];
         [self setNeedsDisplay];
     }
-
 }
 
 #pragma mark - 各种操作
@@ -98,6 +103,8 @@ static BOOL isClicked = YES;
     }
     isClicked = !isClicked;
 }
+
+
 
 
 #pragma mark - 重绘

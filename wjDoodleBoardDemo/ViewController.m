@@ -17,6 +17,12 @@
 @property (weak, nonatomic) IBOutlet wjColorView *colorChooseView;
 @property (weak, nonatomic) IBOutlet wjDoodleBoardView *doodleBoardView;
 
+@property (weak, nonatomic) IBOutlet UISlider *wjRedSlider;
+
+@property (weak, nonatomic) IBOutlet UISlider *wjGreenSlider;
+
+@property (weak, nonatomic) IBOutlet UISlider *wjBlueSlider;
+
 @end
 
 @implementation ViewController
@@ -72,6 +78,10 @@ static BOOL isClicked = YES;
                            };
     [sender setTitleTextAttributes:isClicked ? dict : nil forState:UIControlStateNormal];
     [self.doodleBoardView wjErasePathInDoodleView];
+    if (isClicked) {
+        // rgb归为0，->黑色
+        self.wjRedSlider.value = self.wjGreenSlider.value = self.wjBlueSlider.value = 0.0f;
+    }
     isClicked = !isClicked;
 }
 
@@ -101,6 +111,7 @@ static BOOL isClicked = YES;
     UIImageWriteToSavedPhotosAlbum(image, self, @selector(image: didFinishSavingWithError: contextInfo:), nil);
 }
 
+#pragma mark - 保存需要实现的方法
 // 唯一需要实现的方法
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"保存成功！" message:@"你可以到相册中查看" preferredStyle:UIAlertControllerStyleAlert];

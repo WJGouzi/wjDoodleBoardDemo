@@ -55,6 +55,8 @@
     return _imageView;
 }
 
+
+
 - (void)setWjRedValue:(CGFloat)wjRedValue {
     _wjRedValue = wjRedValue;
     [self setNeedsDisplay];
@@ -76,6 +78,7 @@
     UIColor *color = [UIColor colorWithRed:self.wjRedValue green:self.wjGreenValue blue:self.wjBlueValue alpha:1.0f];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"chooseColor" object:self userInfo:@{@"color" : color}];
 }
+
 
 - (void)drawRect:(CGRect)rect {
     // 开启位图上下文
