@@ -13,10 +13,10 @@
 		9BDF16321ED6D38000BDE26A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BDF16301ED6D38000BDE26A /* Main.storyboard */; };
 		9BDF16341ED6D38000BDE26A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BDF16331ED6D38000BDE26A /* Assets.xcassets */; };
 		9BDF16371ED6D38000BDE26A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BDF16351ED6D38000BDE26A /* LaunchScreen.storyboard */; };
-		9BDF16401ED6D82300BDE26A /* wjColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF163F1ED6D82300BDE26A /* wjColorView.m */; };
-		9BDF16431ED6D93500BDE26A /* wjDoodleBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF16421ED6D93500BDE26A /* wjDoodleBoardView.m */; };
-		9BDF16461ED7127A00BDE26A /* wjBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF16451ED7127A00BDE26A /* wjBezierPath.m */; };
-		9BDF16491ED71CF600BDE26A /* wjHandleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF16481ED71CF600BDE26A /* wjHandleImageView.m */; };
+		9BDFCD791EDEBEAE0051BD08 /* wjBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDFCD721EDEBEAE0051BD08 /* wjBezierPath.m */; };
+		9BDFCD7A1EDEBEAE0051BD08 /* wjColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDFCD741EDEBEAE0051BD08 /* wjColorView.m */; };
+		9BDFCD7B1EDEBEAE0051BD08 /* wjDoodleBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDFCD761EDEBEAE0051BD08 /* wjDoodleBoardView.m */; };
+		9BDFCD7C1EDEBEAE0051BD08 /* wjHandleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDFCD781EDEBEAE0051BD08 /* wjHandleImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,14 +30,14 @@
 		9BDF16331ED6D38000BDE26A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BDF16361ED6D38000BDE26A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BDF16381ED6D38000BDE26A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BDF163E1ED6D82300BDE26A /* wjColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wjColorView.h; path = "涂鸦板/wjColorView.h"; sourceTree = "<group>"; };
-		9BDF163F1ED6D82300BDE26A /* wjColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wjColorView.m; path = "涂鸦板/wjColorView.m"; sourceTree = "<group>"; };
-		9BDF16411ED6D93500BDE26A /* wjDoodleBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wjDoodleBoardView.h; path = "涂鸦板/wjDoodleBoardView.h"; sourceTree = "<group>"; };
-		9BDF16421ED6D93500BDE26A /* wjDoodleBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wjDoodleBoardView.m; path = "涂鸦板/wjDoodleBoardView.m"; sourceTree = "<group>"; };
-		9BDF16441ED7127A00BDE26A /* wjBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wjBezierPath.h; path = "涂鸦板/wjBezierPath.h"; sourceTree = "<group>"; };
-		9BDF16451ED7127A00BDE26A /* wjBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wjBezierPath.m; path = "涂鸦板/wjBezierPath.m"; sourceTree = "<group>"; };
-		9BDF16471ED71CF600BDE26A /* wjHandleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wjHandleImageView.h; path = "涂鸦板/wjHandleImageView.h"; sourceTree = "<group>"; };
-		9BDF16481ED71CF600BDE26A /* wjHandleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wjHandleImageView.m; path = "涂鸦板/wjHandleImageView.m"; sourceTree = "<group>"; };
+		9BDFCD711EDEBEAE0051BD08 /* wjBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjBezierPath.h; sourceTree = "<group>"; };
+		9BDFCD721EDEBEAE0051BD08 /* wjBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjBezierPath.m; sourceTree = "<group>"; };
+		9BDFCD731EDEBEAE0051BD08 /* wjColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjColorView.h; sourceTree = "<group>"; };
+		9BDFCD741EDEBEAE0051BD08 /* wjColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjColorView.m; sourceTree = "<group>"; };
+		9BDFCD751EDEBEAE0051BD08 /* wjDoodleBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjDoodleBoardView.h; sourceTree = "<group>"; };
+		9BDFCD761EDEBEAE0051BD08 /* wjDoodleBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjDoodleBoardView.m; sourceTree = "<group>"; };
+		9BDFCD771EDEBEAE0051BD08 /* wjHandleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjHandleImageView.h; sourceTree = "<group>"; };
+		9BDFCD781EDEBEAE0051BD08 /* wjHandleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjHandleImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,14 +74,7 @@
 				9BDF162B1ED6D38000BDE26A /* AppDelegate.m */,
 				9BDF162D1ED6D38000BDE26A /* ViewController.h */,
 				9BDF162E1ED6D38000BDE26A /* ViewController.m */,
-				9BDF16411ED6D93500BDE26A /* wjDoodleBoardView.h */,
-				9BDF16421ED6D93500BDE26A /* wjDoodleBoardView.m */,
-				9BDF16441ED7127A00BDE26A /* wjBezierPath.h */,
-				9BDF16451ED7127A00BDE26A /* wjBezierPath.m */,
-				9BDF16471ED71CF600BDE26A /* wjHandleImageView.h */,
-				9BDF16481ED71CF600BDE26A /* wjHandleImageView.m */,
-				9BDF163E1ED6D82300BDE26A /* wjColorView.h */,
-				9BDF163F1ED6D82300BDE26A /* wjColorView.m */,
+				9BDFCD581EDEBE6C0051BD08 /* 涂鸦板 */,
 				9BDF16301ED6D38000BDE26A /* Main.storyboard */,
 				9BDF16331ED6D38000BDE26A /* Assets.xcassets */,
 				9BDF16351ED6D38000BDE26A /* LaunchScreen.storyboard */,
@@ -97,6 +90,21 @@
 				9BDF16281ED6D38000BDE26A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9BDFCD581EDEBE6C0051BD08 /* 涂鸦板 */ = {
+			isa = PBXGroup;
+			children = (
+				9BDFCD711EDEBEAE0051BD08 /* wjBezierPath.h */,
+				9BDFCD721EDEBEAE0051BD08 /* wjBezierPath.m */,
+				9BDFCD731EDEBEAE0051BD08 /* wjColorView.h */,
+				9BDFCD741EDEBEAE0051BD08 /* wjColorView.m */,
+				9BDFCD751EDEBEAE0051BD08 /* wjDoodleBoardView.h */,
+				9BDFCD761EDEBEAE0051BD08 /* wjDoodleBoardView.m */,
+				9BDFCD771EDEBEAE0051BD08 /* wjHandleImageView.h */,
+				9BDFCD781EDEBEAE0051BD08 /* wjHandleImageView.m */,
+			);
+			path = "涂鸦板";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,13 +179,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BDF16461ED7127A00BDE26A /* wjBezierPath.m in Sources */,
+				9BDFCD791EDEBEAE0051BD08 /* wjBezierPath.m in Sources */,
+				9BDFCD7B1EDEBEAE0051BD08 /* wjDoodleBoardView.m in Sources */,
+				9BDFCD7A1EDEBEAE0051BD08 /* wjColorView.m in Sources */,
 				9BDF162F1ED6D38000BDE26A /* ViewController.m in Sources */,
 				9BDF162C1ED6D38000BDE26A /* AppDelegate.m in Sources */,
-				9BDF16431ED6D93500BDE26A /* wjDoodleBoardView.m in Sources */,
+				9BDFCD7C1EDEBEAE0051BD08 /* wjHandleImageView.m in Sources */,
 				9BDF16291ED6D38000BDE26A /* main.m in Sources */,
-				9BDF16491ED71CF600BDE26A /* wjHandleImageView.m in Sources */,
-				9BDF16401ED6D82300BDE26A /* wjColorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

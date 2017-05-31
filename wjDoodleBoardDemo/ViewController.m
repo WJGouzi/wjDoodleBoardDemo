@@ -86,10 +86,18 @@ static BOOL isClicked = YES;
 }
 
 - (IBAction)wjCameraTakePhotoAction:(UIBarButtonItem *)sender {
-    UIImagePickerController *cameraPicker = [[UIImagePickerController alloc] init];
-    cameraPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    cameraPicker.delegate = self;
-    [self presentViewController:cameraPicker animated:YES completion:nil];
+    // 设备是否支持摄像头
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] ) {
+        UIImagePickerController *cameraPicker = [[UIImagePickerController alloc] init];
+        cameraPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        cameraPicker.delegate = self;
+        [self presentViewController:cameraPicker animated:YES completion:nil];
+    } else {
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"打开摄像头失败" message:@"您的设备不支持摄像头或未被开启！" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+        [alertVC addAction:action];
+        [self presentViewController:alertVC animated:YES completion:nil];    }
 }
 
 - (IBAction)wjChoosePhotoFromAlbumAction:(UIBarButtonItem *)sender {
