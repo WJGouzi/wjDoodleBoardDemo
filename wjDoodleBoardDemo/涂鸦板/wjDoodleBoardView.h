@@ -24,4 +24,6 @@
 /** image */
 @property (nonatomic, strong) UIImage *image;
 
+// 存放的是path
+@property (nonatomic, strong) NSMutableArray *allPathArray;
 @end

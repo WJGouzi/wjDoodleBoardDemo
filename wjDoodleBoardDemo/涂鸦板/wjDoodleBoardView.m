@@ -14,8 +14,6 @@
 
 @property (nonatomic, strong) wjBezierPath *path;
 
-@property (nonatomic, strong) NSMutableArray *allPathArray;
-
 /** color */
 @property (nonatomic, strong) UIColor *wjColor;
 

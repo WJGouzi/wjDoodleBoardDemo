@@ -115,18 +115,36 @@ static BOOL isClicked = YES;
     [self.doodleBoardView.layer renderInContext:ctx];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    // 保存
-    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image: didFinishSavingWithError: contextInfo:), nil);
+    // 判断有没有进行绘画
+    if (self.doodleBoardView.allPathArray.count > 0) {
+        // 有就进行保存
+        UIImageWriteToSavedPhotosAlbum(image, self, @selector(image: didFinishSavingWithError: contextInfo:), nil);
+    } else {
+        // 给出提示，还没进行绘画
+        [self wjShowAlertNoticeWithTitle:@"提示" message:@"您还未在画布上进行绘制\n保存无法执行!" actionTitle:@"知道了"];
+    }
 }
 
 #pragma mark - 保存需要实现的方法
 // 唯一需要实现的方法
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"保存成功！" message:@"你可以到相册中查看" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+    [self wjShowAlertNoticeWithTitle:@"保存成功!" message:@"你可以到相册中查看" actionTitle:@"确定"];
+}
+
+/**
+ 显示提示框
+ 
+ @param title 提示标题
+ @param message 提示信息
+ @param actionTitle 按钮文字
+ */
+- (void)wjShowAlertNoticeWithTitle:(NSString *)title message:(NSString *)message actionTitle:(NSString *)actionTitle {
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:actionTitle style:UIAlertActionStyleDefault handler:nil];
     [alertVC addAction:action];
     [self presentViewController:alertVC animated:YES completion:nil];
 }
+
 
 #pragma mark - 相册、相机的代理方法
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
