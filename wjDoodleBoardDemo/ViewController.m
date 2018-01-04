@@ -10,6 +10,7 @@
 #import "wjColorView.h"
 #import "wjDoodleBoardView.h"
 #import "wjHandleImageView.h"
+#define isIPhoneX [[UIScreen mainScreen] bounds].size.width == 375.f && [[UIScreen mainScreen] bounds].size.height == 812.0f
 
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, wjHandleImageViewDelegate>
@@ -29,14 +30,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor colorWithRed:177/255.0 green:219/255.0 blue:254/251.0 alpha:1.0];
     // 接受通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(colorChoose:) name:@"chooseColor" object:nil];
+    NSLog(@"进入到控制器");
 }
 
 - (BOOL)prefersStatusBarHidden {
-    return YES;
+    if (isIPhoneX) {
+        return NO;
+    } else {
+        return YES;
+    }
 }
+
+//Interface的方向是否会跟随设备方向自动旋转，如果返回NO,后两个方法不会再调用
+- (BOOL)shouldAutorotate {
+    if ([[UIDevice currentDevice].model isEqualToString:@"iPhone"]) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+//返回直接支持的方向
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return  UIInterfaceOrientationMaskAll;
+}
+//返回最优先显示的屏幕方向
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return UIInterfaceOrientationPortrait;
+}
+
 
 #pragma mark - 颜色选择
 - (IBAction)wjRedColorAction:(UISlider *)sender {

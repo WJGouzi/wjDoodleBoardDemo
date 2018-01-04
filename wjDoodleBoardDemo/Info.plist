@@ -19,13 +19,15 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.2.3</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>使用相机</string>
+	<string>App需要使用相机来拍摄图片,且将图片进行编辑</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>App使用相册,选择相册中的图片进行编辑</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>使用相册</string>
+	<string>App使用相册,选择相册中的图片进行编辑</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -37,6 +39,7 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>

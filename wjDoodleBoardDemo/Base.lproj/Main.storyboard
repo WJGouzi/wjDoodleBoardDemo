@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,16 +15,13 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xre-lZ-3k0">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.69411764705882351" green="0.85882352941176465" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="8wJ-uv-VMa"/>
                                 </constraints>
@@ -143,23 +142,24 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dv-vO-fKG" customClass="wjDoodleBoardView">
-                                <rect key="frame" x="0.0" y="44" width="375" height="483"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="463"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xre-lZ-3k0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AmZ-BF-fTl"/>
-                            <constraint firstAttribute="trailing" secondItem="FQD-mG-4qs" secondAttribute="trailing" id="I2S-o7-IyS"/>
-                            <constraint firstAttribute="trailing" secondItem="2dv-vO-fKG" secondAttribute="trailing" id="K6f-T7-MJH"/>
-                            <constraint firstItem="xre-lZ-3k0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nd7-rt-Drn"/>
-                            <constraint firstItem="2dv-vO-fKG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ruq-5t-FbW"/>
+                            <constraint firstItem="xre-lZ-3k0" firstAttribute="top" secondItem="KHV-A1-SbZ" secondAttribute="top" id="6fR-bg-Duf"/>
+                            <constraint firstItem="xre-lZ-3k0" firstAttribute="leading" secondItem="KHV-A1-SbZ" secondAttribute="leading" id="AmZ-BF-fTl"/>
+                            <constraint firstItem="KHV-A1-SbZ" firstAttribute="trailing" secondItem="FQD-mG-4qs" secondAttribute="trailing" id="I2S-o7-IyS"/>
+                            <constraint firstItem="KHV-A1-SbZ" firstAttribute="trailing" secondItem="2dv-vO-fKG" secondAttribute="trailing" id="K6f-T7-MJH"/>
+                            <constraint firstItem="2dv-vO-fKG" firstAttribute="leading" secondItem="KHV-A1-SbZ" secondAttribute="leading" id="Ruq-5t-FbW"/>
                             <constraint firstItem="FQD-mG-4qs" firstAttribute="top" secondItem="2dv-vO-fKG" secondAttribute="bottom" id="TJH-av-Wn9"/>
-                            <constraint firstItem="FQD-mG-4qs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Yyu-Mw-XPP"/>
-                            <constraint firstAttribute="bottom" secondItem="FQD-mG-4qs" secondAttribute="bottom" id="bsl-oP-zvt"/>
+                            <constraint firstItem="FQD-mG-4qs" firstAttribute="leading" secondItem="KHV-A1-SbZ" secondAttribute="leading" id="Yyu-Mw-XPP"/>
+                            <constraint firstItem="KHV-A1-SbZ" firstAttribute="bottom" secondItem="FQD-mG-4qs" secondAttribute="bottom" id="bsl-oP-zvt"/>
                             <constraint firstItem="2dv-vO-fKG" firstAttribute="top" secondItem="xre-lZ-3k0" secondAttribute="bottom" id="ksg-Ss-fvH"/>
-                            <constraint firstAttribute="trailing" secondItem="xre-lZ-3k0" secondAttribute="trailing" id="nYf-cV-hh0"/>
+                            <constraint firstItem="KHV-A1-SbZ" firstAttribute="trailing" secondItem="xre-lZ-3k0" secondAttribute="trailing" id="nYf-cV-hh0"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="KHV-A1-SbZ"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>

@@ -138,7 +138,7 @@
 				TargetAttributes = {
 					9BDF16231ED6D38000BDE26A = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 684VKU9G29;
+						DevelopmentTeam = 6UK4NFK9JE;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -305,12 +305,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 684VKU9G29;
+				DEVELOPMENT_TEAM = 6UK4NFK9JE;
 				INFOPLIST_FILE = wjDoodleBoardDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.wj;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangjun.doodleBoardProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -318,12 +319,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 684VKU9G29;
+				DEVELOPMENT_TEAM = 6UK4NFK9JE;
 				INFOPLIST_FILE = wjDoodleBoardDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.wj;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangjun.doodleBoardProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
