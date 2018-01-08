@@ -10,6 +10,10 @@
 #import "wjColorView.h"
 #import "wjDoodleBoardView.h"
 #import "wjHandleImageView.h"
+#import "WJNewEditionTestManager.h"
+
+#define appID @"1251844760"
+
 #define isIPhoneX [[UIScreen mainScreen] bounds].size.width == 375.f && [[UIScreen mainScreen] bounds].size.height == 812.0f
 
 #define isIPhoneSE [[UIScreen mainScreen] bounds].size.width == 320.f && [[UIScreen mainScreen] bounds].size.height == 568.0f
@@ -35,7 +39,9 @@
     self.view.backgroundColor = [UIColor colorWithRed:177/255.0 green:219/255.0 blue:254/251.0 alpha:1.0];
     // 接受通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(colorChoose:) name:@"chooseColor" object:nil];
-    NSLog(@"进入到控制器");
+    // 检测有误更新程序
+    [WJNewEditionTestManager checkNewEditionWithAppID:appID ctrl:self];
+    // 屏幕适配
     [self adjustIPhoneSEScreen];
 }
 

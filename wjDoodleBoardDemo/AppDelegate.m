@@ -18,7 +18,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     NSLog(@"进入到程序中");
-    
     return YES;
 }
 

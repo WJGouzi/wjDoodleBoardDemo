@@ -17,6 +17,8 @@
 		9BDFCD7A1EDEBEAE0051BD08 /* wjColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDFCD741EDEBEAE0051BD08 /* wjColorView.m */; };
 		9BDFCD7B1EDEBEAE0051BD08 /* wjDoodleBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDFCD761EDEBEAE0051BD08 /* wjDoodleBoardView.m */; };
 		9BDFCD7C1EDEBEAE0051BD08 /* wjHandleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDFCD781EDEBEAE0051BD08 /* wjHandleImageView.m */; };
+		DAE07863200310230000F405 /* WJAppStoreInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE07860200310230000F405 /* WJAppStoreInfoModel.m */; };
+		DAE07864200310230000F405 /* WJNewEditionTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE07862200310230000F405 /* WJNewEditionTestManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		9BDFCD761EDEBEAE0051BD08 /* wjDoodleBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjDoodleBoardView.m; sourceTree = "<group>"; };
 		9BDFCD771EDEBEAE0051BD08 /* wjHandleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjHandleImageView.h; sourceTree = "<group>"; };
 		9BDFCD781EDEBEAE0051BD08 /* wjHandleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjHandleImageView.m; sourceTree = "<group>"; };
+		DAE0785F200310230000F405 /* WJAppStoreInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJAppStoreInfoModel.h; sourceTree = "<group>"; };
+		DAE07860200310230000F405 /* WJAppStoreInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJAppStoreInfoModel.m; sourceTree = "<group>"; };
+		DAE07861200310230000F405 /* WJNewEditionTestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJNewEditionTestManager.h; sourceTree = "<group>"; };
+		DAE07862200310230000F405 /* WJNewEditionTestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJNewEditionTestManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 				9BDF162B1ED6D38000BDE26A /* AppDelegate.m */,
 				9BDF162D1ED6D38000BDE26A /* ViewController.h */,
 				9BDF162E1ED6D38000BDE26A /* ViewController.m */,
+				DAE0785E200310230000F405 /* updateModule */,
 				9BDFCD581EDEBE6C0051BD08 /* 涂鸦板 */,
 				9BDF16301ED6D38000BDE26A /* Main.storyboard */,
 				9BDF16331ED6D38000BDE26A /* Assets.xcassets */,
@@ -105,6 +112,17 @@
 				9BDFCD781EDEBEAE0051BD08 /* wjHandleImageView.m */,
 			);
 			path = "涂鸦板";
+			sourceTree = "<group>";
+		};
+		DAE0785E200310230000F405 /* updateModule */ = {
+			isa = PBXGroup;
+			children = (
+				DAE0785F200310230000F405 /* WJAppStoreInfoModel.h */,
+				DAE07860200310230000F405 /* WJAppStoreInfoModel.m */,
+				DAE07861200310230000F405 /* WJNewEditionTestManager.h */,
+				DAE07862200310230000F405 /* WJNewEditionTestManager.m */,
+			);
+			path = updateModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +198,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BDFCD791EDEBEAE0051BD08 /* wjBezierPath.m in Sources */,
+				DAE07864200310230000F405 /* WJNewEditionTestManager.m in Sources */,
+				DAE07863200310230000F405 /* WJAppStoreInfoModel.m in Sources */,
 				9BDFCD7B1EDEBEAE0051BD08 /* wjDoodleBoardView.m in Sources */,
 				9BDFCD7A1EDEBEAE0051BD08 /* wjColorView.m in Sources */,
 				9BDF162F1ED6D38000BDE26A /* ViewController.m in Sources */,

@@ -28,6 +28,11 @@
 	<string>App使用相册,选择相册中的图片进行编辑</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>App使用相册,选择相册中的图片进行编辑</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
