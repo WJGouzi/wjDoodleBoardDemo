@@ -12,6 +12,7 @@
 #import "wjHandleImageView.h"
 #define isIPhoneX [[UIScreen mainScreen] bounds].size.width == 375.f && [[UIScreen mainScreen] bounds].size.height == 812.0f
 
+#define isIPhoneSE [[UIScreen mainScreen] bounds].size.width == 320.f && [[UIScreen mainScreen] bounds].size.height == 568.0f
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, wjHandleImageViewDelegate>
 
@@ -23,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UISlider *wjGreenSlider;
 
 @property (weak, nonatomic) IBOutlet UISlider *wjBlueSlider;
+@property (weak, nonatomic) IBOutlet UIToolbar *WJToolBar;
 
 @end
 
@@ -34,6 +36,7 @@
     // 接受通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(colorChoose:) name:@"chooseColor" object:nil];
     NSLog(@"进入到控制器");
+    [self adjustIPhoneSEScreen];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -61,6 +64,16 @@
     return UIInterfaceOrientationPortrait;
 }
 
+#pragma mark - SE屏幕的适配
+- (void)adjustIPhoneSEScreen {
+    if (isIPhoneSE) {
+        NSLog(@"is iphone SE");
+        for (UIBarButtonItem *item in self.WJToolBar.items) {
+            [item setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14.f]} forState:UIControlStateNormal];
+            [item setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14.f]} forState:UIControlStateHighlighted];
+        }
+    }
+}
 
 #pragma mark - 颜色选择
 - (IBAction)wjRedColorAction:(UISlider *)sender {

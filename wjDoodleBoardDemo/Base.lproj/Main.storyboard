@@ -75,7 +75,6 @@
                                         <rect key="frame" x="338" y="12" width="27" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="Nvz-d6-nON"/>
-                                            <constraint firstAttribute="width" constant="27" id="gwr-zW-10c"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
@@ -164,6 +163,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="WJToolBar" destination="xre-lZ-3k0" id="dX4-Cf-QQB"/>
                         <outlet property="colorChooseView" destination="jZ4-Hm-2so" id="MiP-FF-tTW"/>
                         <outlet property="doodleBoardView" destination="2dv-vO-fKG" id="B5J-gX-5Z1"/>
                         <outlet property="wjBlueSlider" destination="GpB-LV-8C7" id="qTN-UU-Uga"/>
@@ -173,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+            <point key="canvasLocation" x="47" y="-168"/>
         </scene>
     </scenes>
 </document>
