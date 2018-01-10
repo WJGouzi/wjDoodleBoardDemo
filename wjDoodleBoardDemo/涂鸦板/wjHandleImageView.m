@@ -28,6 +28,7 @@
     if (!_imgV) {
         _imgV = [[UIImageView alloc] initWithFrame:self.bounds];
         _imgV.userInteractionEnabled = YES;
+        _imgV.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:_imgV];
         [self handleViewWithGesture];
     }

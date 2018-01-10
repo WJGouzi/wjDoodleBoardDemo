@@ -99,7 +99,7 @@
             if (result) {
                 if(update)update(model);
             } else {
-//                [MBProgressHUD showLabelWithText:@"已经是最新的版本！"];
+
             }
         } else {
 #ifdef DEBUG

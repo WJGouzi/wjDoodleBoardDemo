@@ -22,6 +22,7 @@
 
 @property (weak, nonatomic) IBOutlet wjColorView *colorChooseView;
 @property (weak, nonatomic) IBOutlet wjDoodleBoardView *doodleBoardView;
+@property (nonatomic, strong) wjHandleImageView *handleView;
 
 @property (weak, nonatomic) IBOutlet UISlider *wjRedSlider;
 
@@ -61,6 +62,7 @@
         return YES;
     }
 }
+
 //返回直接支持的方向
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations{
     return  UIInterfaceOrientationMaskAll;
@@ -108,10 +110,17 @@
 
 - (IBAction)wjClearScreenAction:(UIBarButtonItem *)sender {
     [self.doodleBoardView wjClearPathInDoodleView];
+    if ([self.view.subviews containsObject:(UIView *)self.handleView]) {
+        [self.handleView removeFromSuperview];
+    }
 }
 
 - (IBAction)wjUndoAction:(UIBarButtonItem *)sender {
-    [self.doodleBoardView wjUndoPathInDoodleView];
+    if ([self.view.subviews containsObject:(UIView *)self.handleView]) {
+        [self.handleView removeFromSuperview];  // 如果有未编辑的图片就直接移除掉
+    } else {
+        [self.doodleBoardView wjUndoPathInDoodleView];
+    }
 }
 
 static BOOL isClicked = YES;
@@ -198,6 +207,7 @@ static BOOL isClicked = YES;
     handleView.image = image;
     handleView.delegate = self;
     [self.view addSubview:handleView];
+    self.handleView = handleView;
     [self dismissViewControllerAnimated:YES completion:nil];
     
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:@"可对图片进行缩放\\旋转\\移动等编辑\n但需要'长按'才能保存到绘图板中!" preferredStyle:UIAlertControllerStyleAlert];
