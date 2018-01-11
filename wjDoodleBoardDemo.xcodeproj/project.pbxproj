@@ -17,6 +17,7 @@
 		9BDFCD7A1EDEBEAE0051BD08 /* wjColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDFCD741EDEBEAE0051BD08 /* wjColorView.m */; };
 		9BDFCD7B1EDEBEAE0051BD08 /* wjDoodleBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDFCD761EDEBEAE0051BD08 /* wjDoodleBoardView.m */; };
 		9BDFCD7C1EDEBEAE0051BD08 /* wjHandleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDFCD781EDEBEAE0051BD08 /* wjHandleImageView.m */; };
+		DA5A21F22006F31400C5D39A /* WJEditPhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5A21F12006F31400C5D39A /* WJEditPhotoVC.m */; };
 		DAE07863200310230000F405 /* WJAppStoreInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE07860200310230000F405 /* WJAppStoreInfoModel.m */; };
 		DAE07864200310230000F405 /* WJNewEditionTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE07862200310230000F405 /* WJNewEditionTestManager.m */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,8 @@
 		9BDFCD761EDEBEAE0051BD08 /* wjDoodleBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjDoodleBoardView.m; sourceTree = "<group>"; };
 		9BDFCD771EDEBEAE0051BD08 /* wjHandleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjHandleImageView.h; sourceTree = "<group>"; };
 		9BDFCD781EDEBEAE0051BD08 /* wjHandleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjHandleImageView.m; sourceTree = "<group>"; };
+		DA5A21F02006F31400C5D39A /* WJEditPhotoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJEditPhotoVC.h; sourceTree = "<group>"; };
+		DA5A21F12006F31400C5D39A /* WJEditPhotoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJEditPhotoVC.m; sourceTree = "<group>"; };
 		DAE0785F200310230000F405 /* WJAppStoreInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJAppStoreInfoModel.h; sourceTree = "<group>"; };
 		DAE07860200310230000F405 /* WJAppStoreInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJAppStoreInfoModel.m; sourceTree = "<group>"; };
 		DAE07861200310230000F405 /* WJNewEditionTestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJNewEditionTestManager.h; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 				9BDF162B1ED6D38000BDE26A /* AppDelegate.m */,
 				9BDF162D1ED6D38000BDE26A /* ViewController.h */,
 				9BDF162E1ED6D38000BDE26A /* ViewController.m */,
+				DA5A21E92006F2B900C5D39A /* editPhoto */,
 				DAE0785E200310230000F405 /* updateModule */,
 				9BDFCD581EDEBE6C0051BD08 /* 涂鸦板 */,
 				9BDF16301ED6D38000BDE26A /* Main.storyboard */,
@@ -112,6 +116,15 @@
 				9BDFCD781EDEBEAE0051BD08 /* wjHandleImageView.m */,
 			);
 			path = "涂鸦板";
+			sourceTree = "<group>";
+		};
+		DA5A21E92006F2B900C5D39A /* editPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				DA5A21F02006F31400C5D39A /* WJEditPhotoVC.h */,
+				DA5A21F12006F31400C5D39A /* WJEditPhotoVC.m */,
+			);
+			path = editPhoto;
 			sourceTree = "<group>";
 		};
 		DAE0785E200310230000F405 /* updateModule */ = {
@@ -199,6 +212,7 @@
 			files = (
 				9BDFCD791EDEBEAE0051BD08 /* wjBezierPath.m in Sources */,
 				DAE07864200310230000F405 /* WJNewEditionTestManager.m in Sources */,
+				DA5A21F22006F31400C5D39A /* WJEditPhotoVC.m in Sources */,
 				DAE07863200310230000F405 /* WJAppStoreInfoModel.m in Sources */,
 				9BDFCD7B1EDEBEAE0051BD08 /* wjDoodleBoardView.m in Sources */,
 				9BDFCD7A1EDEBEAE0051BD08 /* wjColorView.m in Sources */,
