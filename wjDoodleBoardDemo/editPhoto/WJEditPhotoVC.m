@@ -51,12 +51,12 @@
         NSString *isFirstFlag = [[NSUserDefaults standardUserDefaults] objectForKey:@"isFirst"];
         if (!isFirstFlag.length) {
             [[NSUserDefaults standardUserDefaults] setObject:@"isFirstShow" forKey:@"isFirst"];
-            [self creatUI];
+            [self creatNoticeViewUI];
         }
     }
 }
 
-- (void)creatUI {
+- (void)creatNoticeViewUI {
     UIView *noticeView = [[UIView alloc] initWithFrame:self.view.frame];
     noticeView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
     [self.view addSubview:noticeView];
@@ -109,20 +109,20 @@
 
 
 - (void)setUpUI {
-    
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
+    backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;// 写在前面解决了图片被拉伸的bug
     backgroundImageView.image = self.selectedImage;
-    backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
     backgroundImageView.userInteractionEnabled = YES;
     [self.view addSubview:backgroundImageView];
-    UIView *coveredView = [[UIView alloc] initWithFrame:self.view.frame];
+    
+    UIView *coveredView = [[UIView alloc] initWithFrame:backgroundImageView.frame];
     coveredView.userInteractionEnabled = YES;
     coveredView.backgroundColor = [UIColor blackColor];
     coveredView.alpha = 0.6;
     [backgroundImageView addSubview:coveredView];
 
     // 剪切的imageView
-    UIImageView *editImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
+    UIImageView *editImageView = [[UIImageView alloc] initWithFrame:backgroundImageView.frame];
     editImageView.contentMode = UIViewContentModeScaleAspectFit;
     editImageView.image = self.selectedImage;
     [coveredView addSubview:editImageView];
@@ -130,6 +130,7 @@
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panInPicture:)];
     [editImageView addGestureRecognizer:pan];
     self.editImageView = editImageView;
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:@"取消" forState:UIControlStateNormal];
     button.frame = CGRectMake(50, 50, 50, 30);
